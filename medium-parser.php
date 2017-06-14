@@ -24,11 +24,9 @@ function medium_parser_admin_menu () {
 }
 
 function medium_parser_public_scripts () {
-    wp_register_script('jQuery-3.2.1', plugins_url('/js/public/jquery-3.2.1.min.js',__FILE__), array(), '', true);
-    wp_register_script('medium-parser-js-dateFormat-inc', plugins_url('/js/public/jquery-dateFormat.min.js',__FILE__), array('jQuery-3.2.1'), '', true);
-    wp_register_script('medium-parser-js-public', plugins_url('/js/public/medium-parser-api.js',__FILE__), array('jQuery-3.2.1', 'medium-parser-js-dateFormat-inc'), '', true);
+    wp_register_script('medium-parser-js-dateFormat-inc', plugins_url('/js/public/jquery-dateFormat.min.js',__FILE__), array('jquery'), '', true);
+    wp_register_script('medium-parser-js-public', plugins_url('/js/public/medium-parser-api.js',__FILE__), array('jquery', 'medium-parser-js-dateFormat-inc'), '', true);
 
-    wp_enqueue_script('jQuery-3.2.1');
     wp_enqueue_script('medium-parser-js-dateFormat-inc');
     wp_enqueue_script('medium-parser-js-public');
 }
@@ -62,6 +60,8 @@ function medium_parser_settings_callback () {
             @submit_button();
     echo'
             </form>
+            <p>To display the first 4 posts from your medium feed simply use the shortcode [medium-parser-disp] wherever it is required.</p>
+            <p>This plugin was created for simple use but if you require more functionality feel free to get in touch with me at <a href="mailto:jason@jasonmdesign.com">jason@jasonmdesign.com</a></p> 
         </div>
     ';
 }

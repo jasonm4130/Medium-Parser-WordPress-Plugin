@@ -1,10 +1,9 @@
-$(function () {
+jQuery(document).ready(function ($) {
 	var $content = $('#jsonContent');
     var data = {
 		rss_url: ''
 	};
     data.rss_url = mediumFeedUrl;
-    console.log('This is kinda working');
 	$.get('https://api.rss2json.com/v1/api.json', data, function (response) {
 		if (response.status == 'ok') {
 			var output = '';
@@ -31,7 +30,6 @@ $(function () {
 				return k < 3;
 			});
 			$content.html(output);
-            console.log('The api is working');
 		}
 	});
 });
