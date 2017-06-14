@@ -2,7 +2,7 @@
 	
 /*
 Plugin Name: Medium Parser
-Plugin URI: http://
+Plugin URI: https://github.com/jasonm4130/Medium-Parser-WordPress-Plugin
 Description: This plugin allows you to parse your medium feed into your WordPress site. Linking back to your medium accounts stories.
 Author: Jason Matthew
 Author URI: https://jasonmdesign.com
